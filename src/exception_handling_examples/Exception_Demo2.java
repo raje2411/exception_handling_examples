@@ -8,7 +8,7 @@ class Exception_Test2 {
 		int nums[] = new int[4];
 
 		System.out.println("Before exception is generated");
-		nums[7] = 9; // exception is generated.
+		nums[7] = 9; // exception is generated. But it is not caught here.
 		System.out.println("This wont print");
 	}
 
@@ -22,7 +22,7 @@ public class Exception_Demo2 {
 			// Calling the method from another class which will generate the array out of
 			// bound exception
 			Exception_Test2.method_gen_exception();
-		} catch (ArrayIndexOutOfBoundsException exp1) {  //Catching the exception caused by another method.
+		} catch (ArrayIndexOutOfBoundsException exp1) { // Catching the exception caused by another method.
 			System.out.println("Index array is out of bounds, check the array assignment carefully!");
 		}
 		System.out.println("After the method is called");
